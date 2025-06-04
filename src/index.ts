@@ -2,6 +2,8 @@
  * Allow to capitalize the first character of string param
  * @param {string} str
  * @returns string
+ * @example
+ * ucFirst('peniel') // 'Peniel'
  */
 export const ucFirst = (str: string): string => {
   return str[0].toUpperCase() + str.substring(1);
@@ -11,6 +13,8 @@ export const ucFirst = (str: string): string => {
  * Convert the first character of string to lowercase:
  * @param {string} str
  * @returns {string}
+ * @example
+ * lcFirst('Peniel') // 'peniel'
  */
 export const lcFirst = (str: string): string => {
   return str[0].toLowerCase() + str.substring(1);
@@ -22,6 +26,8 @@ export const lcFirst = (str: string): string => {
  * @param  {string}  subject
  * @param  {string}  search
  * @returns {string}
+ * @example
+ * after('hello world', 'hello') // ' world'
  */
 export const after = (subject: string, search: string): string => {
   if (search === "") return subject;
@@ -36,6 +42,8 @@ export const after = (subject: string, search: string): string => {
  * @param  {string}  subject
  * @param  {string}  search
  * @returns {string}
+ * @example
+ * afterLast('a/b/c', '/') // 'c'
  */
 export const afterLast = (subject: string, search: string): string => {
   return search === "" ? subject : subject.split(search).reverse()[0];
@@ -47,6 +55,8 @@ export const afterLast = (subject: string, search: string): string => {
  * @param  {string}  subject
  * @param  {string}  search
  * @returns {string}
+ * @example
+ * before('hello world', ' world') // 'hello'
  */
 export const before = (subject: string, search: string): string => {
   return search === "" ? subject : subject.split(search)[0];
@@ -58,6 +68,8 @@ export const before = (subject: string, search: string): string => {
  * @param  {string}  subject
  * @param  {string}  search
  * @returns {string}
+ * @example
+ * beforeLast('a/b/c', '/') // 'a/b'
  */
 
 export const beforeLast = (subject: string, search: string): string => {
@@ -73,6 +85,8 @@ export const beforeLast = (subject: string, search: string): string => {
  * @param  {string}  from
  * @param  {string}  to
  * @returns {string}
+ * @example
+ * between('This is my name', 'This', 'name') // ' is my '
  */
 export const between = (subject: string, from: string, to: string): string => {
   if (from === "" || to === "") return subject;
@@ -86,6 +100,8 @@ export const between = (subject: string, from: string, to: string): string => {
  * @param  {string}  from
  * @param  {string}  to
  * @returns {string}
+ * @example
+ * betweenFirst('[a] bc [d]', '[', ']') // 'a'
  */
 
 export const betweenFirst = (
@@ -102,6 +118,8 @@ export const betweenFirst = (
  *
  * @param  {string}  value
  * @returns {string}
+ * @example
+ * camel('foo_bar') // 'fooBar'
  */
 
 export const camel = (value: string): string => {
@@ -118,6 +136,8 @@ export const camel = (value: string): string => {
  * @param  {string}  value
  * @param  {string}  delimiter
  * @returns {string}
+ * @example
+ * snake('fooBar') // 'foo_bar'
  */
 
 export const snake = (value: string, delimiter: string = "_"): string => {
@@ -133,6 +153,8 @@ export const snake = (value: string, delimiter: string = "_"): string => {
  *
  * @param  {string}  $value
  * @returns {string}
+ * @example
+ * kebab('fooBar') // 'foo-bar'
  */
 
 export const kebab = (value: string): string => {
@@ -146,6 +168,8 @@ export const kebab = (value: string): string => {
  * @param  {string}  search
  * @param  {bool}  ignoreCase
  * @returns {bool}
+ * @example
+ * contains('This is my name', 'my') // true
  */
 
 export const contains = (
@@ -164,6 +188,8 @@ export const contains = (
  * @param  {array}  words
  * @param  {bool}  ignoreCase
  * @returns {bool}
+ * @example
+ * containsAll('This is my name', ['my', 'name']) // true
  */
 
 export const containsAll = (
@@ -183,6 +209,8 @@ export const containsAll = (
  * @param  {string}  subject
  * @param  {string}  search
  * @returns {bool}
+ * @example
+ * endsWith('This is my name', 'name') // true
  */
 
 export const endsWith = (subject: string, search: string): boolean => {
@@ -194,6 +222,8 @@ export const endsWith = (subject: string, search: string): boolean => {
  *
  * @param  {string}  value
  * @returns {bool}
+ * @example
+ * isJson('{"name":"foo"}') // true
  */
 
 export const isJson = (value: string): boolean => {
@@ -210,6 +240,8 @@ export const isJson = (value: string): boolean => {
  *
  * @param  {string}  value
  * @returns {int}
+ * @example
+ * length('Peniel') // 6
  */
 
 export const length = (value: string): number => {
@@ -223,6 +255,8 @@ export const length = (value: string): number => {
  * @param  {int}  limit
  * @param  {string}  end
  * @returns {string}
+ * @example
+ * limit('Peniel DIALUNDAMA', 12) // 'Peniel DIALU...'
  */
 
 export const limit = (
@@ -239,6 +273,8 @@ export const limit = (
  *
  * @param  {string}  value
  * @returns {string}
+ * @example
+ * lower('Peniel') // 'peniel'
  */
 
 export const lower = (value: string): string => {
@@ -250,6 +286,8 @@ export const lower = (value: string): string => {
  *
  * @param  {string}  value
  * @returns {string}
+ * @example
+ * upper('Peniel') // 'PENIEL'
  */
 
 export const upper = (value: string): string => {
@@ -261,6 +299,8 @@ export const upper = (value: string): string => {
  *
  * @param  {int}  length
  * @returns {string}
+ * @example
+ * random(5) // e.g. 'a1b2c'
  */
 
 export const random = (length: number): string => {
@@ -277,6 +317,8 @@ export const random = (length: number): string => {
  * @param  {string}  before
  * @param  {string}  after
  * @returns {string}
+ * @example
+ * wrap('Peniel', 'Mr. ', ' Wifi') // 'Mr. Peniel Wifi'
  */
 export const wrap = (
   value: string,
